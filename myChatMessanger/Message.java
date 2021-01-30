@@ -25,14 +25,12 @@ public class Message implements Serializable {
         this.type = type;
         this.data = data;
         this.toUserName = toUserName;
-
     }
 
     public Message(MessageType type, File file, String toUserName) {
         this.type = type;
         this.file = file;
         this.toUserName = toUserName;
-
     }
 
     public MessageType getType() {
