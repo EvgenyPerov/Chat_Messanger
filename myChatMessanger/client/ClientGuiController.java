@@ -38,17 +38,11 @@ public class ClientGuiController extends Client {
 
            if (bannedWords(inputMessage) == true) {
                sendTextMessage("Пользователь "+user+" забанен за ненормативную лексику");
-               try{
-                   view.frame.dispose();
+               view.frame.dispose();
                clientConnected = false;
-               connection.close();
-               getSocketThread().interrupt();
-               Thread.currentThread().interrupt();
-           } catch (IOException e) {
-               e.printStackTrace();
-           }
+               connection.getRemoteSocketAddress();
 
-           JOptionPane.showMessageDialog(
+               JOptionPane.showMessageDialog(
                    view.frame,
                    "Бан за ненормативную лексику. Соединение закрыто",
                    "Блокировка клиента",
