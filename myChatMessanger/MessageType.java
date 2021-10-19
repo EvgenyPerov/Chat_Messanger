@@ -1,5 +1,5 @@
 package myChatMessanger;
-
+// **** здесь перечисляются типы сообщений
 public enum MessageType {
     NAME_REQUEST,
     USER_NAME,
